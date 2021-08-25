@@ -10,5 +10,67 @@
 <button onclick="thirdTask()">3rd task</button>
 <button onclick="taskFour()">4th task</button>
 <button onclick="taskFive()">5th task</button>
+
+<style>
+.blue {
+background: blue;
+}
+.hider{
+	opacity: 0;
+}
+</style>
+<!--<div id="testId">-->
+<!--	TEXT!-->
+<!--</div>-->
+<!--<script>-->
+<!--	const elem = document.getElementById('testId')-->
+<!--	elem.className = 'blue';-->
+<!--</script>-->
+
+<!--<ul>-->
+<!--	<li>UL 1 LI 1</li>-->
+<!--	<li>UL 1 LI 2</li>-->
+<!--</ul>-->
+<!--<ul>-->
+<!--	<li>UL 2 LI 1</li>-->
+<!--	<li>UL 2 LI 2</li>-->
+<!--</ul>-->
+<!--<script>-->
+<!--	const elem = document.querySelectorAll('ul > li:last-child');-->
+<!--	for (let i=0; i < elem.length; i++) {-->
+<!--		elem[i].style.background = i==0 ? 'blue' : 'orange';-->
+<!--	}-->
+<!--</script>-->
+
+<input type="button" id="hideit" value="Нажмите, чтобы спрятать текст" />
+
+<div id="text">Текст</div>
+
+<script>
+	document.getElementById('hideit').onclick = function (){
+		document.getElementById('text').className = 'hider'
+	}
+</script>
+
+<button id="test2">HIDE IT!</button>
+<script>
+
+		function test3(){
+		this.className = 'hider';
+	}
+		const elem1 = document.getElementById("test2");
+		elem1.addEventListener('click', test3);
+</script>
+
+<button id="myid">кнопчанский</button>
+<script>
+	const button = document.getElementById("myid");
+
+	button.addEventListener("click", function() { alert("1"); });
+
+	button.removeEventListener("click", function() { alert("1"); });
+
+	button.onclick = function() { alert(2); };
+</script>
 </body>
 </html>
